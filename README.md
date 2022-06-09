@@ -9,6 +9,12 @@ As Fedora is regularly updated while being stable enough to avoid maintenance ta
 
 I have tried Arch before but the effort required to maintain my setup became too taxing. This does not mean I hate Arch however, as I still revisit it when I have free time. Just not worth the trouble for a daily driver.
 
+## Required packages
+With chezmoi, scripts can be easily integrated to install all of this effortlessly. But as of now, I have other commitments and as such I will be listing the dependencies of these dotfiles:
+
+* DE - `gnome` (preinstalled on Fedora)
+* Editor - `neovim`
+
 ## Roadmap
 I will be focusing more on extending my command line skills, and as such I will be focusing more on CLI. Eventually the desktop will be just a bootloader for my CLI activities.
 ### 🏃‍♂️ Immediate goals
@@ -18,6 +24,7 @@ I will be focusing more on extending my command line skills, and as such I will 
 - [ ] Configure zsh with zinit (shell)
 ### 🎯 Medium to long-term goals
 - [ ] Configure GNOME keybindings
+- [ ] Autoinstall script for packages
 - [ ] Integrate more everyday activities to CLI (editor, music player, mail client)
 - [ ] Configure aliases to make common commands easier
 - [ ] For GUI apps, use GTK 4 as much as possible (because they are more usable and more eye-candy at the same time)
