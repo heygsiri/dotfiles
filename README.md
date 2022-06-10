@@ -13,6 +13,7 @@ I have tried Arch before but the effort required to maintain my setup became too
 With chezmoi, scripts can be easily integrated to install all of this effortlessly. But as of now, I have other commitments and as such I will be listing the dependencies of these dotfiles:
 
 * DE - `gnome` (preinstalled on Fedora)
+* Font - full `Noto` fonts, any [`Nerd Font`](https://www.nerdfonts.com/)
 * Editor - `neovim`
 
 ## Roadmap
