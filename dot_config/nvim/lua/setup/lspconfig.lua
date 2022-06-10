@@ -46,10 +46,11 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'clangd', 'pyright', 'sumneko_lua' }
+local servers = { 'clangd', 'pylsp', 'sumneko_lua' }
 
 lsp_installer.setup{
-  ensure_installed = servers
+  ensure_installed = servers,
+  automatic_installation = true
 }
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
