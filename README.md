@@ -20,7 +20,7 @@ With chezmoi, scripts can be easily integrated to install all of this effortless
 I will be focusing more on extending my command line skills, and as such I will be focusing more on CLI. Eventually the desktop will be just a bootloader for my CLI activities.
 ### 🏃‍♂️ Immediate goals
 - [x] Configure Neovim (editor)
-- [ ] Configure tmux (multiplexer)
+- [x] Configure tmux (multiplexer)
 - [ ] Configure starship (shell)
 - [ ] Configure zsh with zinit (shell)
 ### 🎯 Medium to long-term goals
