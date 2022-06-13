@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# If not interactive, don't do anything
+[[ $- != *i* ]] && return
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	source /etc/bashrc
@@ -22,4 +25,13 @@ export PATH
 #	done
 #fi
 
-unset rc
+#unset rc
+
+# tmux
+if [[ "$TERM" != "tmux-256color" ]] && [[ "$TERM" != "tmux-256" ]] ; then
+  if tmux has-session; then
+    exec tmux attach 
+  else
+    exec tmux
+  fi
+fi
