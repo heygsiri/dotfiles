@@ -33,10 +33,13 @@ if [ -x "$(command -v starship)" ]; then
 fi
 
 # tmux
-if [[ "$TERM" != "tmux-256color" ]] && [[ "$TERM" != "tmux-256" ]] ; then
-  if tmux has-session; then
-    exec tmux attach 
-  else
-    exec tmux
-  fi
-fi
+# WARNING: commented out as it introduces issue with neovim terminals.
+# a more robust implementation can be expected when zsh plugins are used,
+# but i'll try to do it in bash :)
+#if [[ "$TERM" != "tmux-256color" ]] && [[ "$TERM" != "tmux-256" ]] ; then
+#  if tmux has-session; then
+#    exec tmux attach 
+#  else
+#    exec tmux
+#  fi
+#fi
