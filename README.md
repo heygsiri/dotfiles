@@ -22,7 +22,7 @@ I will be focusing more on extending my command line skills, and as such I will 
 - [x] Configure Neovim (editor)
 - [x] Configure tmux (multiplexer)
 - [x] Configure starship (shell)
-- [ ] Configure zsh with zinit (shell)
+- [x] Configure zsh with zinit (shell)
 ### 🎯 Medium to long-term goals
 - [ ] base16 colors on shell, tmux, nvim
 - [ ] Configure GNOME keybindings
