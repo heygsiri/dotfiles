@@ -26,10 +26,12 @@ I will be focusing more on extending my command line skills, and as such I will 
 ### 🎯 Medium to long-term goals
 - [ ] base16 colors on shell, tmux, nvim
 - [ ] Configure GNOME keybindings
-- [ ] Autoinstall script for packages
 - [ ] Integrate more everyday activities to CLI (editor, music player, mail client)
 - [ ] Configure aliases to make common commands easier
 - [ ] For GUI apps, use GTK 4 as much as possible (because they are more usable and more eye-candy at the same time)
 - [ ] Full screen the terminal and never go back [^1]
+### VLT (Very Long-Term Goals) 
+- [ ] Autoinstall script for packages
+- [ ] Integrate ansible to further automate installation (on multiple machines)
 
 [^1]: This is mostly a joke, as certain workloads call for GUIs (web browsing, graphics, screencasting). But who knows?
