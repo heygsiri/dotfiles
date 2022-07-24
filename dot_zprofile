@@ -1,0 +1,12 @@
+# .bash_profile
+
+# Get env vars
+if [ -f ~/.profile ]; then
+  . ~/.profile
+fi
+
+# Get the aliases and functions
+if [ -f ~/.zshrc ]; then
+	. ~/.zshrc
+fi
+
