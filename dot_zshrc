@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# If not interactive, don't do anything
+[[ $- != *i* ]] && return
+
+# Source global definitions
+if [ -f /etc/zsh/zprofile ]; then
+	source /etc/zsh/zprofile
+fi
+
+# User specific environment
+if ! [[ "$PATH" == *"$HOME/.local/bin:$HOME/bin:"* ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# User specific aliases and functions
+# TODO: Make cross-shell aliases/functions dir
+#if [ -d ~/.bashrc.d ]; then
+#	for rc in ~/.bashrc.d/*; do
+#		if [ -f "$rc" ]; then
+#			source "$rc"
+#		fi
+#	done
+#fi
+
+#unset rc
+
+# starship
+if [ -x "$(command -v starship)" ]; then
+  eval "$(starship init zsh)"
+fi
+
+# tmux
+# WARNING: commented out as it introduces issue with neovim terminals.
+# a more robust implementation can be expected when zsh plugins are used,
+# but i'll try to do it in bash :)
+#if [[ "$TERM" != "tmux-256color" ]] && [[ "$TERM" != "tmux-256" ]] ; then
+#  if tmux has-session; then
+#    exec tmux attach 
+#  else
+#    exec tmux
+#  fi
+#fi
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+zinit wait lucid for \
+ atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zdharma-continuum/fast-syntax-highlighting \
+ blockf \
+    zsh-users/zsh-completions \
+ atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions
+### End of Zinit's installer chunk
