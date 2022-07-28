@@ -73,3 +73,7 @@ zinit wait lucid for \
  atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions
 ### End of Zinit's installer chunk
+
+# Set base16 theme here
+zinit ice atload"base16_dracula"
+zinit light base16-project/base16-shell
