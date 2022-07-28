@@ -77,12 +77,12 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- theme
-  use "Mofiqul/dracula.nvim"
   use { 'akinsho/bufferline.nvim', tag = "v2.*",
     requires = 'kyazdani42/nvim-web-devicons',
     config = function() require('bufferline').setup {} end }
   use {
     "nvim-lualine/lualine.nvim",
+    requires = 'RRethy/nvim-base16',
     config = function() require('setup.lualine') end
   }
   -- treesitter
