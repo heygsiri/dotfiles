@@ -24,7 +24,7 @@ I will be focusing more on extending my command line skills, and as such I will 
 - [x] Configure starship (shell)
 - [x] Configure zsh with zinit (shell)
 ### 🎯 Medium to long-term goals
-- [ ] base16 colors on shell, tmux, nvim
+- [x] base16 colors on shell, tmux, nvim
 - [ ] Configure GNOME keybindings
 - [ ] Integrate more everyday activities to CLI (editor, music player, mail client)
 - [ ] Configure aliases to make common commands easier
