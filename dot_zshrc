@@ -1,11 +1,15 @@
-#!/bin/bash
-
 # If not interactive, don't do anything
 [[ $- != *i* ]] && return
 
 # Source global definitions
 if [ -f /etc/zsh/zprofile ]; then
 	source /etc/zsh/zprofile
+fi
+
+## Launch tmux
+# Source: https://unix.stackexchange.com/a/113768
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s 0
 fi
 
 # User specific environment
@@ -27,10 +31,6 @@ export PATH
 
 #unset rc
 
-# starship
-if [ -x "$(command -v starship)" ]; then
-  eval "$(starship init zsh)"
-fi
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -62,15 +62,15 @@ zinit wait lucid for \
     zsh-users/zsh-autosuggestions
 ### End of Zinit's installer chunk
 # command-not-found to easily find required package
-zinit snippet OMZP::command-not-found
-## Set base16 theme here
+#zinit snippet OMZP::command-not-found
+
+## Set base16 theme here (slow!)
 if [ ! -f $HOME/.config/base16-project/base16_shell_theme ]; then
 zinit ice atload"base16_dracula" # Theme if unset using 'base16_<theme>' command
 fi
 zinit light base16-project/base16-shell
 
-## Launch tmux
-# Source: https://unix.stackexchange.com/a/113768
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s 0
+# starship
+if [ -x "$(command -v starship)" ]; then
+  eval "$(starship init zsh)"
 fi
