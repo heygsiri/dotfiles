@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# ONLY INTENDED FOR USE IN NEW INSTALLS
-# NEEDS ERROR HANDLING FOR PUBLIC USE.
-{{ if eq .chezmoi.os "linux" -}}
-FF_DIR=~/.mozilla/firefox/$(grep 'Path=.*default-release' ~/.mozilla/firefox/profiles.ini | sed s/^Path=//)
-cd $FF_DIR
-sh -c "$(curl -fSsL https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh)"
-{{ end -}}
