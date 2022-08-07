@@ -71,6 +71,6 @@ zinit light base16-project/base16-shell
 
 ## Launch tmux
 # Source: https://unix.stackexchange.com/a/113768
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+if command -v tmux &> /dev/null && [[ ! "$TERM" =~ screen ]] && [ -z "$TMUX" ]; then
   exec tmux new-session -A -s 0
 fi
