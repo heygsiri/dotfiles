@@ -31,7 +31,6 @@ I will be focusing more on extending my command line skills, and as such I will 
 - [ ] For GUI apps, use GTK 4 as much as possible (because they are more usable and more eye-candy at the same time)
 - [ ] Full screen the terminal and never go back [^1]
 ### VLT (Very Long-Term Goals) 
-- [ ] Autoinstall script for packages
 - [ ] Integrate ansible to further automate installation (on multiple machines)
 
 [^1]: This is mostly a joke, as certain workloads call for GUIs (web browsing, graphics, screencasting). But who knows?
