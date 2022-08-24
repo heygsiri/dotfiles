@@ -72,6 +72,7 @@ zinit wait lucid for \
 # starship
 if [ -x "$(command -v starship)" ]; then
   eval "$(starship init zsh)"
+fi
 ## Launch tmux
 # Source: https://unix.stackexchange.com/a/113768
 if command -v tmux &> /dev/null && [[ ! "$TERM" =~ screen ]] && [ -z "$TMUX" ]; then
