@@ -24,6 +24,7 @@ I will be focusing more on extending my command line skills, and as such I will 
 ### 🎯 Medium to long-term goals
 - [x] base16 colors on ~~shell, tmux,~~ nvim
 - [x] Configure GNOME keybindings
+- [ ] Write scripts for everyday tasks with a tiling WM
 - [ ] Integrate more everyday activities to CLI (editor, music player, mail client)
 - [ ] Configure aliases to make common commands easier
 - [ ] For GUI apps, use GTK 4 as much as possible (because they are more usable and more eye-candy at the same time)
