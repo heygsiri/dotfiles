@@ -6,7 +6,7 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi --show run | xargs swaymsg exec --
+set $menu bemenu-run | xargs swaymsg exec --
 
 # Start a terminal
 bindsym $mod+Return exec $term
