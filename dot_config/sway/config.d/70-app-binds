@@ -13,3 +13,6 @@ bindsym $mod+Return exec $term
 
 # Start your launcher
 bindsym $mod+d exec $menu
+
+# Lock
+bindsym Mod1+Shift+l exec swaylock
