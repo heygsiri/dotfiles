@@ -7,6 +7,10 @@ if [ -f /etc/zsh/zprofile ]; then
 	source /etc/zsh/zprofile
 fi
 
+## Launch wm
+if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway
+fi
 ## Launch tmux
 # Source: https://unix.stackexchange.com/a/113768
 if command -v tmux &> /dev/null && [[ ! "$TERM" =~ screen ]] && [ -z "$TMUX" ]; then
