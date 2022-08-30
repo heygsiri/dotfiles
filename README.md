@@ -1,13 +1,11 @@
 # (.) dotfiles
 
-Dotfiles for a **Fedora 36** that can obtain software via the official repos, RPM Fusion, and Flatpak. This desktop uses **GNOME 42** and **Adwaita**. It focuses on stability and prides itself on a configuration that changes (mostly) for functionality rather than form.
+Dotfiles for an **Arch Linux** desktop. Subject to change due to my personal tastes.
 
 However, these dotfiles are managed by [chezmoi](https://chezmoi.io), which is unavailable on Fedora at the moment.
 
-## Why Fedora?
-As Fedora is regularly updated while being stable enough to avoid maintenance tasks that would be required on DIY-focused distros, expect fewer breakages (such as packages not being available).
-
-I have tried Arch before but the effort required to maintain my setup became too taxing. This does not mean I hate Arch however, as I still revisit it when I have free time. Just not worth the trouble for a daily driver.
+## Why Arch?
+I want to try NixOS but it's probably better to do so in a sandbox.
 
 ## Required packages
 With chezmoi, scripts can be easily integrated to install all of this effortlessly. But as of now, I have other commitments and as such I will be listing the dependencies of these dotfiles:
