@@ -1,1 +1,13 @@
-exec mako
+# vi: ft=i3config
+# Creature Comforts
+# Necessary `exec` statements to make sure features
+# work as intended
+
+# Fix for GTK+ apps taking too long to start
+# https://github.com/swaywm/sway/issues/5732
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+# Autostart
+# Notification daemon
+exec mako || dunst
+
