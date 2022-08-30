@@ -15,4 +15,4 @@ bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
 
 # Lock
-bindsym Mod1+Shift+l exec swaylock
+bindsym Mod1+Shift+l exec lock

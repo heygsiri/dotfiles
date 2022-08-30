@@ -1,0 +1,4 @@
+#!/bin/sh
+swaymsg "output * dpms off"
+swaylock
+swaymsg "output * dpms on"
