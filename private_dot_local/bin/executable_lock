@@ -1,4 +1,6 @@
 #!/bin/sh
+physlock -l
 swaymsg "output * dpms off"
 swaylock
 swaymsg "output * dpms on"
+physlock -L
