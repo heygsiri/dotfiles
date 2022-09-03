@@ -11,3 +11,14 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSO
 # Notification daemon
 exec mako || dunst
 
+# Terminal
+exec foot
+
+# Mail
+workspace 2; exec thunderbird; workspace back_and_forth
+
+# Browser
+workspace 3; exec firefox; workspace back_and_forth
+
+# Discord
+workspace 9; exec chromium 'https://discord.com/app' ; workspace back_and_forth
