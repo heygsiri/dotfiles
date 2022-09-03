@@ -16,24 +16,24 @@ export PATH
 
 # User specific aliases and functions
 # TODO: Make cross-shell aliases/functions dir
-#if [ -d ~/.bashrc.d ]; then
-#	for rc in ~/.bashrc.d/*; do
-#		if [ -f "$rc" ]; then
-#			source "$rc"
-#		fi
-#	done
-#fi
+if [ -d ~/.config/shell/ ]; then
+	for rc in ~/.config/shell/*; do
+		if [ -f "$rc" ]; then
+			source "$rc"
+		fi
+	done
+fi
 
 #unset rc
 
 ## Launch wm
-if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-  exec sway
-fi
+#if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+#  exec sway
+#fi
 ## Launch tmux
 # Source: https://unix.stackexchange.com/a/113768
 if command -v tmux &> /dev/null && [[ ! "$TERM" =~ screen ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s 0
+  exec tmuxp load 0 || tmux new-session -A -s 0
 fi
 
 
