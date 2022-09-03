@@ -21,3 +21,9 @@ bindsym Mod1+Shift+l exec lock
 
 # Browser
 bindsym $mod+Shift+Return exec $browser
+
+# Chromium discord
+bindsym $mod+i exec chromium 'https://discord.com/app'
+
+# Pomodoro
+bindsym $mod+p exec flatpak run org.gnome.Solanum
