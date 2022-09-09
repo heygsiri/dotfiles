@@ -2,6 +2,18 @@
 # If not interactive, don't do anything
 [[ $- != *i* ]] && return
 
+#unset rc
+
+## Launch wm
+#if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+#  exec sway
+#fi
+## Launch tmux
+# Source: https://unix.stackexchange.com/a/113768
+if command -v tmux &> /dev/null && [[ ! "$TERM" =~ screen ]] && [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s 0
+fi
+
 # Source global definitions
 if [ -f /etc/zsh/zprofile ]; then
 	source /etc/zsh/zprofile
@@ -23,19 +35,6 @@ if [ -d ~/.config/shell/ ]; then
 		fi
 	done
 fi
-
-#unset rc
-
-## Launch wm
-#if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-#  exec sway
-#fi
-## Launch tmux
-# Source: https://unix.stackexchange.com/a/113768
-if command -v tmux &> /dev/null && [[ ! "$TERM" =~ screen ]] && [ -z "$TMUX" ]; then
-  exec tmuxp load 0 || tmux new-session -A -s 0
-fi
-
 
 
 ### Added by Zinit's installer
@@ -69,10 +68,10 @@ zinit wait lucid for \
 ### End of Zinit's installer chunk
 
 ## Set base16 theme here (slow!)
-#if [ ! -f $HOME/.config/base16-project/base16_shell_theme ]; then
-#zinit ice atload"base16_dracula" # Theme if unset using 'base16_<theme>' command
-#fi
-#zinit light base16-project/base16-shell
+if [ ! -f $HOME/.config/base16-project/base16_shell_theme ]; then
+zinit ice atload"base16_catppuccin" # Theme if unset using 'base16_<theme>' command
+fi
+zinit light base16-project/base16-shell
 
 # starship
 if [ -x "$(command -v starship)" ]; then
