@@ -19,8 +19,12 @@ bindsym $mod+d exec $menu
 # Lock
 bindsym Mod1+Shift+l exec lock
 
+# Screenshot
+bindsym Print exec grimshot copy area
+
 # Browser
 bindsym $mod+Shift+Return exec $browser
+
 
 # Chromium discord
 bindsym $mod+i exec chromium 'https://discord.com/app'
