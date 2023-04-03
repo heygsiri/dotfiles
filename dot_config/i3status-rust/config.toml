@@ -12,8 +12,8 @@ alert = 10.0
 
 [[block]]
 block = "memory"
-format_mem = "$mem_used_percents"
-format_swap = "$swap_used_percents"
+format = "$mem_used_percents"
+format_alt = "$swap_used_percents"
 
 [[block]]
 block = "cpu"
