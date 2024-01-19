@@ -67,12 +67,6 @@ zinit wait lucid for \
     zsh-users/zsh-autosuggestions
 ### End of Zinit's installer chunk
 
-## Set base16 theme here (slow!)
-if [ ! -f $HOME/.config/base16-project/base16_shell_theme ]; then
-zinit ice atload"base16_catppuccin" # Theme if unset using 'base16_<theme>' command
-fi
-zinit light base16-project/base16-shell
-
 # starship
 if [ -x "$(command -v starship)" ]; then
   eval "$(starship init zsh)"
