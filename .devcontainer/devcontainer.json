@@ -13,10 +13,25 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "/workspaces/dotfiles/install.sh"
+	"postCreateCommand": "/workspaces/dotfiles/install.sh",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"1Password.op-vscode",
+				"vscodevim.vim",
+				"Catppuccin.catppuccin-vsc",
+				"Catppuccin.catppuccin-vsc-icons"
+			],
+			"settings": {
+				"workbench.iconTheme": "catppuccin-mocha",
+				"workbench.preferredDarkColorTheme":  "Catppuccin Macchiato",
+				"workbench.preferredLightColorTheme": "Catppuccin Latte"
+			}
+		}
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
