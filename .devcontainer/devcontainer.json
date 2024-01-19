@@ -26,8 +26,9 @@
 				"Catppuccin.catppuccin-vsc-icons"
 			],
 			"settings": {
+				"window.autoDetectColorScheme": true,
 				"workbench.iconTheme": "catppuccin-mocha",
-				"workbench.preferredDarkColorTheme":  "Catppuccin Macchiato",
+				"workbench.preferredDarkColorTheme":  "Catppuccin Mocha",
 				"workbench.preferredLightColorTheme": "Catppuccin Latte"
 			}
 		}
