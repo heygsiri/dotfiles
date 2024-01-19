@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# PATH
+if ! [[ "$PATH" == *"$HOME/.local/bin:$HOME/bin:"* ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
 # Default apps
 # Editor
 if command -v 'nvim' > /dev/null; then
