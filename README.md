@@ -32,4 +32,23 @@ I will be focusing more on extending my command line skills, and as such I will 
 ### VLT (Very Long-Term Goals) 
 - [ ] Integrate ansible to further automate installation (on multiple machines)
 
+## How to install
+### The easy way (requires [Chezmoi](https://www.chezmoi.io/))
+```sh
+chezmoi init heygsiri --apply
+```
+### The copy-paste way
+```sh
+git clone 'https://github.com/heygsiri/dotfiles'
+cd dotfiles
+./install.sh 
+```
+### Try in a docker container (CLI apps only, experimental)
+```sh
+git clone 'https://github.com/heygsiri/dotfiles'
+cd dotfiles/.devcontainer
+docker build . -t heygsiri/dotfiles:latest
+docker run -it --rm heygsiri/dotfiles:latest bash
+```
+
 [^1]: This is mostly a joke, as certain workloads call for GUIs (web browsing, graphics, screencasting). But who knows?
