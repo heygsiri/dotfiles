@@ -11,6 +11,6 @@ RUN apk update && apk add 1password-cli \
     tmux \
     zellij \
     neovim
-
+RUN ../install.sh
 # TODO: set environment (put this in bashrc someday)
 ENV EDITOR=nvim
