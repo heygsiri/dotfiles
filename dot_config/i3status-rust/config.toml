@@ -1,5 +1,7 @@
 [theme]
-theme = "dracula"
+theme = "ctp-mocha"
+[theme.overrides]
+separator = " "
 [icons]
 icons = "material-nf"
 
