@@ -2,8 +2,8 @@
 
 bar {
     position top
-#    font monospace Regular 12
-    height 20
+    font monospace Regular 12
+#   height 20
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command i3status-rs || while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
