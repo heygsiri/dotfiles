@@ -10,6 +10,10 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSO
 # Autostart
 # Notification daemon
 exec mako || dunst
+# NetworkManager
+exec_always nm-applet --indicator
+# 1Password
+exec 1password --quick-access
 
 # Terminal
 exec foot
